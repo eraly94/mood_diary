@@ -170,6 +170,7 @@ class _HomePageState extends State<HomePage> {
             _formatDate(selectedDate),
             style: AppStyles.w700f18,
           ),
+          centerTitle: true,
           actions: [
             Padding(
               padding: const EdgeInsets.only(right: 20),
@@ -192,14 +193,14 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Container(
-                      width: 288,
+                      width: 320,
                       height: 30,
                       decoration: BoxDecoration(
                         color: AppColors.grey4,
                         borderRadius: BorderRadius.circular(47),
                       ),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           InkWell(
                             onTap: () {
@@ -222,6 +223,9 @@ class _HomePageState extends State<HomePage> {
                                       'assets/icons/diary.png',
                                       width: 12,
                                       height: 12,
+                                      color: currentIndex == 0
+                                          ? AppColors.white
+                                          : AppColors.grey,
                                     ),
                                     const SizedBox(width: 6),
                                     Text(
@@ -258,6 +262,9 @@ class _HomePageState extends State<HomePage> {
                                       'assets/icons/diary.png',
                                       width: 12,
                                       height: 12,
+                                      color: currentIndex == 1
+                                          ? AppColors.white
+                                          : AppColors.grey,
                                     ),
                                     const SizedBox(width: 6),
                                     Text(
